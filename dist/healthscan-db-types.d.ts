@@ -41,7 +41,8 @@ export declare enum EIssueType {
     UNDERUSED_LICENSES = 26,
     ATTACHMENT_STATS = 28,
     SOFTWARE_ENTITLEMENTS = 29,
-    DEPRECATED_APIS = 30
+    DEPRECATED_APIS = 30,
+    MESSAGING_INFRASTRUCTURE_HEALTH = 31
 }
 export declare const IssueTypeTitleMap: Record<EIssueType, string>;
 export declare const CategoryToIssueTypesMap: Record<ECategory, EIssueType[]>;

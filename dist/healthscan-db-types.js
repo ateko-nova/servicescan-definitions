@@ -55,6 +55,7 @@ var EIssueType;
     EIssueType[EIssueType["ATTACHMENT_STATS"] = 28] = "ATTACHMENT_STATS";
     EIssueType[EIssueType["SOFTWARE_ENTITLEMENTS"] = 29] = "SOFTWARE_ENTITLEMENTS";
     EIssueType[EIssueType["DEPRECATED_APIS"] = 30] = "DEPRECATED_APIS";
+    EIssueType[EIssueType["MESSAGING_INFRASTRUCTURE_HEALTH"] = 31] = "MESSAGING_INFRASTRUCTURE_HEALTH";
 })(EIssueType || (exports.EIssueType = EIssueType = {}));
 //export type EIssueTypeExcludeMonthly = Exclude<EIssueType, EIssueType.MONTHLY_REPORT>;
 exports.IssueTypeTitleMap = {
@@ -86,6 +87,7 @@ exports.IssueTypeTitleMap = {
     [EIssueType.ATTACHMENT_STATS]: "Attachment stats",
     [EIssueType.SOFTWARE_ENTITLEMENTS]: "Software Entitlements",
     [EIssueType.DEPRECATED_APIS]: "Use of Deprecated APIs",
+    [EIssueType.MESSAGING_INFRASTRUCTURE_HEALTH]: "Messaging Infrastructure Health",
 };
 exports.CategoryToIssueTypesMap = {
     [ECategory.UX_UI]: [
@@ -101,6 +103,7 @@ exports.CategoryToIssueTypesMap = {
         EIssueType.DUPLICATE_UPDATE_SETS,
         EIssueType.SAM_REPORT,
         EIssueType.HAM_REPORT,
+        EIssueType.MESSAGING_INFRASTRUCTURE_HEALTH,
     ],
     [ECategory.UPGRADABILITY]: [
         EIssueType.LAST_SYSTEM_UPGRADE,
