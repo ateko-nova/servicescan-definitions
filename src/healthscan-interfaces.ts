@@ -24,6 +24,19 @@ type TSectionTemplate<T extends ISectionBase> = T;
 // Naming conventions:
 // T{Whatever}Section for type names, following the name of the defined EIssueType.WHATEVER
 
+export type THelloWorldSection = TSectionTemplate<{
+  issueType: EIssueType.HELLO_WORLD;
+  sectionConfig: {
+    someThreshold: number;
+    someProp: number;
+    otherProp: string;
+  };
+  scanDetails: {
+    name: string;
+    lastName: string;
+  }[];
+}>;
+
 export type TSlowQueriesSection = TSectionTemplate<{
   issueType: EIssueType.SLOW_QUERIES;
   sectionConfig: {

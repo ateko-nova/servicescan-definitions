@@ -18,6 +18,18 @@ interface ISectionBase {
  * It makes typescript enforce the required types for each section.
  */
 type TSectionTemplate<T extends ISectionBase> = T;
+export type THelloWorldSection = TSectionTemplate<{
+    issueType: EIssueType.HELLO_WORLD;
+    sectionConfig: {
+        someThreshold: number;
+        someProp: number;
+        otherProp: string;
+    };
+    scanDetails: {
+        name: string;
+        lastName: string;
+    }[];
+}>;
 export type TSlowQueriesSection = TSectionTemplate<{
     issueType: EIssueType.SLOW_QUERIES;
     sectionConfig: {
