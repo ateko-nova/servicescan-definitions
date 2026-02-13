@@ -51,6 +51,7 @@ export enum EIssueType {
   //MONTHLY_REPORT=27,
   ATTACHMENT_STATS = 28,
   SOFTWARE_ENTITLEMENTS = 29,
+  ORPHAN_INACTIVE_CONFIGS = 30,
   HELLO_WORLD = 9999,
 }
 
@@ -85,6 +86,7 @@ export const IssueTypeTitleMap: Record<EIssueType, string> = {
   [EIssueType.UNDERUSED_LICENSES]: "Underutilized Licenses",
   [EIssueType.ATTACHMENT_STATS]: "Attachment stats",
   [EIssueType.SOFTWARE_ENTITLEMENTS]: "Software Entitlements",
+  [EIssueType.ORPHAN_INACTIVE_CONFIGS]: "Orphan and Inactive Configurations",
   [EIssueType.HELLO_WORLD]: "Hello World!",
 };
 
@@ -104,6 +106,7 @@ export const CategoryToIssueTypesMap: Record<ECategory, EIssueType[]> = {
     EIssueType.DUPLICATE_UPDATE_SETS,
     EIssueType.SAM_REPORT,
     EIssueType.HAM_REPORT,
+    EIssueType.ORPHAN_INACTIVE_CONFIGS,
   ],
 
   [ECategory.UPGRADABILITY]: [

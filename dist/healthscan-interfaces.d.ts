@@ -30,6 +30,17 @@ export type THelloWorldSection = TSectionTemplate<{
         lastName: string;
     }[];
 }>;
+export type TOrphanInactiveConfigsSection = TSectionTemplate<{
+    issueType: EIssueType.ORPHAN_INACTIVE_CONFIGS;
+    sectionConfig: {};
+    scanDetails: {
+        name: string;
+        class: string;
+        id: string;
+        health_status: string;
+        reason: string;
+    }[];
+}>;
 export type TSlowQueriesSection = TSectionTemplate<{
     issueType: EIssueType.SLOW_QUERIES;
     sectionConfig: {

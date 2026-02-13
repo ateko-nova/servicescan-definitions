@@ -54,6 +54,7 @@ var EIssueType;
     //MONTHLY_REPORT=27,
     EIssueType[EIssueType["ATTACHMENT_STATS"] = 28] = "ATTACHMENT_STATS";
     EIssueType[EIssueType["SOFTWARE_ENTITLEMENTS"] = 29] = "SOFTWARE_ENTITLEMENTS";
+    EIssueType[EIssueType["ORPHAN_INACTIVE_CONFIGS"] = 30] = "ORPHAN_INACTIVE_CONFIGS";
     EIssueType[EIssueType["HELLO_WORLD"] = 9999] = "HELLO_WORLD";
 })(EIssueType || (exports.EIssueType = EIssueType = {}));
 //export type EIssueTypeExcludeMonthly = Exclude<EIssueType, EIssueType.MONTHLY_REPORT>;
@@ -85,6 +86,7 @@ exports.IssueTypeTitleMap = {
     [EIssueType.UNDERUSED_LICENSES]: "Underutilized Licenses",
     [EIssueType.ATTACHMENT_STATS]: "Attachment stats",
     [EIssueType.SOFTWARE_ENTITLEMENTS]: "Software Entitlements",
+    [EIssueType.ORPHAN_INACTIVE_CONFIGS]: "Orphan and Inactive Configurations",
     [EIssueType.HELLO_WORLD]: "Hello World!",
 };
 exports.CategoryToIssueTypesMap = {
@@ -102,6 +104,7 @@ exports.CategoryToIssueTypesMap = {
         EIssueType.DUPLICATE_UPDATE_SETS,
         EIssueType.SAM_REPORT,
         EIssueType.HAM_REPORT,
+        EIssueType.ORPHAN_INACTIVE_CONFIGS,
     ],
     [ECategory.UPGRADABILITY]: [
         EIssueType.LAST_SYSTEM_UPGRADE,

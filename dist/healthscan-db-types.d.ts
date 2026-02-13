@@ -41,6 +41,7 @@ export declare enum EIssueType {
     UNDERUSED_LICENSES = 26,
     ATTACHMENT_STATS = 28,
     SOFTWARE_ENTITLEMENTS = 29,
+    ORPHAN_INACTIVE_CONFIGS = 30,
     HELLO_WORLD = 9999
 }
 export declare const IssueTypeTitleMap: Record<EIssueType, string>;
