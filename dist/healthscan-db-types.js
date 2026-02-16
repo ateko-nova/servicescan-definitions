@@ -54,6 +54,7 @@ var EIssueType;
     //MONTHLY_REPORT=27,
     EIssueType[EIssueType["ATTACHMENT_STATS"] = 28] = "ATTACHMENT_STATS";
     EIssueType[EIssueType["SOFTWARE_ENTITLEMENTS"] = 29] = "SOFTWARE_ENTITLEMENTS";
+    EIssueType[EIssueType["MESSAGING_INFRASTRUCTURE_HEALTH"] = 30] = "MESSAGING_INFRASTRUCTURE_HEALTH";
     EIssueType[EIssueType["HELLO_WORLD"] = 9999] = "HELLO_WORLD";
 })(EIssueType || (exports.EIssueType = EIssueType = {}));
 //export type EIssueTypeExcludeMonthly = Exclude<EIssueType, EIssueType.MONTHLY_REPORT>;
@@ -85,6 +86,7 @@ exports.IssueTypeTitleMap = {
     [EIssueType.UNDERUSED_LICENSES]: "Underutilized Licenses",
     [EIssueType.ATTACHMENT_STATS]: "Attachment stats",
     [EIssueType.SOFTWARE_ENTITLEMENTS]: "Software Entitlements",
+    [EIssueType.MESSAGING_INFRASTRUCTURE_HEALTH]: "Messaging Infrastructure Health",
     [EIssueType.HELLO_WORLD]: "Hello World!",
 };
 exports.CategoryToIssueTypesMap = {
@@ -97,6 +99,7 @@ exports.CategoryToIssueTypesMap = {
     ],
     [ECategory.MANAGEABILITY]: [
         EIssueType.INSTANCE_ERROR_LOGS,
+        EIssueType.MESSAGING_INFRASTRUCTURE_HEALTH,
         EIssueType.DUPLICATE_SCRIPT_INCLUDES,
         EIssueType.DUPLICATE_FIELDS,
         EIssueType.DUPLICATE_UPDATE_SETS,

@@ -379,3 +379,20 @@ export type TASyncAjaxMethodsSection = TSectionTemplate<{
     URL: string;
   }[];
 }>;
+export type TMessagingInfrastructureHealthSection = TSectionTemplate<{
+  issueType: EIssueType.MESSAGING_INFRASTRUCTURE_HEALTH;
+  sectionConfig: {
+    timeRangeDays: number;
+    totalIssuesFound: number;
+  };
+  scanDetails: {
+    logSource: string; // e.g., "ecc_queue", "sys_log_transaction", "sys_outbound_http_log"
+    severity: "Critical" | "Error" | "Warning";
+    message: string;
+    errorCount: number;
+    firstOccurrence: string;
+    lastOccurrence: string;
+    URL: string;
+    additionalDetails?: string;
+  }[];
+}>;
