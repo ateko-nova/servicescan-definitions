@@ -52,7 +52,6 @@ export enum EIssueType {
   ATTACHMENT_STATS = 28,
   SOFTWARE_ENTITLEMENTS = 29,
   MESSAGING_INFRASTRUCTURE_HEALTH = 30,
-  HELLO_WORLD = 9999, // For testing only, not stored in DB
 }
 
 //export type EIssueTypeExcludeMonthly = Exclude<EIssueType, EIssueType.MONTHLY_REPORT>;
@@ -88,7 +87,6 @@ export const IssueTypeTitleMap: Record<EIssueType, string> = {
   [EIssueType.SOFTWARE_ENTITLEMENTS]: "Software Entitlements",
   [EIssueType.MESSAGING_INFRASTRUCTURE_HEALTH]:
     "Messaging Infrastructure Health",
-  [EIssueType.HELLO_WORLD]: "Hello World!",
 };
 
 export const CategoryToIssueTypesMap: Record<ECategory, EIssueType[]> = {
@@ -97,7 +95,6 @@ export const CategoryToIssueTypesMap: Record<ECategory, EIssueType[]> = {
     EIssueType.GLOBAL_UI_SCRIPTS,
     EIssueType.BUSY_FORMS,
     EIssueType.TOO_MANY_CHOICES,
-    EIssueType.HELLO_WORLD,
   ],
 
   [ECategory.MANAGEABILITY]: [
