@@ -386,7 +386,7 @@ export type TMessagingInfrastructureHealthSection = TSectionTemplate<{
     totalIssuesFound: number;
   };
   scanDetails: {
-    logSource: string; // e.g., "ecc_queue", "sys_log_transaction", "sys_outbound_http_log"
+    logSource: string; // e.g., "ecc_queue", "syslog_transaction", "sys_outbound_http_log"
     severity: "Critical" | "Error" | "Warning";
     message: string;
     errorCount: number;
