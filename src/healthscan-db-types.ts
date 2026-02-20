@@ -51,6 +51,7 @@ export enum EIssueType {
   //MONTHLY_REPORT=27,
   ATTACHMENT_STATS = 28,
   SOFTWARE_ENTITLEMENTS = 29,
+  DEPRECATED_APIS = 30,
 }
 
 //export type EIssueTypeExcludeMonthly = Exclude<EIssueType, EIssueType.MONTHLY_REPORT>;
@@ -84,6 +85,7 @@ export const IssueTypeTitleMap: Record<EIssueType, string> = {
   [EIssueType.UNDERUSED_LICENSES]: "Underutilized Licenses",
   [EIssueType.ATTACHMENT_STATS]: "Attachment stats",
   [EIssueType.SOFTWARE_ENTITLEMENTS]: "Software Entitlements",
+  [EIssueType.DEPRECATED_APIS]: "Use of Deprecated APIs",
 };
 
 export const CategoryToIssueTypesMap: Record<ECategory, EIssueType[]> = {
@@ -108,6 +110,7 @@ export const CategoryToIssueTypesMap: Record<ECategory, EIssueType[]> = {
     EIssueType.REPORT_3_MONTHS,
     EIssueType.UNDERUSED_LICENSES,
     EIssueType.SOFTWARE_ENTITLEMENTS,
+    EIssueType.DEPRECATED_APIS,
   ],
 
   [ECategory.SECURITY]: [
