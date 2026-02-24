@@ -54,6 +54,8 @@ var EIssueType;
     //MONTHLY_REPORT=27,
     EIssueType[EIssueType["ATTACHMENT_STATS"] = 28] = "ATTACHMENT_STATS";
     EIssueType[EIssueType["SOFTWARE_ENTITLEMENTS"] = 29] = "SOFTWARE_ENTITLEMENTS";
+    EIssueType[EIssueType["DATA_ARCHIVING_RETENTION"] = 30] = "DATA_ARCHIVING_RETENTION";
+    EIssueType[EIssueType["HELLO_WORLD"] = 9999] = "HELLO_WORLD";
 })(EIssueType || (exports.EIssueType = EIssueType = {}));
 //export type EIssueTypeExcludeMonthly = Exclude<EIssueType, EIssueType.MONTHLY_REPORT>;
 exports.IssueTypeTitleMap = {
@@ -84,6 +86,8 @@ exports.IssueTypeTitleMap = {
     [EIssueType.UNDERUSED_LICENSES]: "Underutilized Licenses",
     [EIssueType.ATTACHMENT_STATS]: "Attachment stats",
     [EIssueType.SOFTWARE_ENTITLEMENTS]: "Software Entitlements",
+    [EIssueType.DATA_ARCHIVING_RETENTION]: "Data Archiving & Retention",
+    [EIssueType.HELLO_WORLD]: "Hello World!",
 };
 exports.CategoryToIssueTypesMap = {
     [ECategory.UX_UI]: [
@@ -122,5 +126,6 @@ exports.CategoryToIssueTypesMap = {
         EIssueType.LARGE_TABLES,
         EIssueType.INSERTS_IN_BUSINESS_RULES,
         EIssueType.ATTACHMENT_STATS,
+        EIssueType.DATA_ARCHIVING_RETENTION,
     ],
 };

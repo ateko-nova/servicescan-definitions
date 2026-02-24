@@ -51,6 +51,8 @@ export enum EIssueType {
   //MONTHLY_REPORT=27,
   ATTACHMENT_STATS = 28,
   SOFTWARE_ENTITLEMENTS = 29,
+  DATA_ARCHIVING_RETENTION = 30,
+  HELLO_WORLD = 9999,
 }
 
 //export type EIssueTypeExcludeMonthly = Exclude<EIssueType, EIssueType.MONTHLY_REPORT>;
@@ -84,6 +86,8 @@ export const IssueTypeTitleMap: Record<EIssueType, string> = {
   [EIssueType.UNDERUSED_LICENSES]: "Underutilized Licenses",
   [EIssueType.ATTACHMENT_STATS]: "Attachment stats",
   [EIssueType.SOFTWARE_ENTITLEMENTS]: "Software Entitlements",
+  [EIssueType.DATA_ARCHIVING_RETENTION]: "Data Archiving & Retention",
+  [EIssueType.HELLO_WORLD]: "Hello World!",
 };
 
 export const CategoryToIssueTypesMap: Record<ECategory, EIssueType[]> = {
@@ -127,5 +131,6 @@ export const CategoryToIssueTypesMap: Record<ECategory, EIssueType[]> = {
     EIssueType.LARGE_TABLES,
     EIssueType.INSERTS_IN_BUSINESS_RULES,
     EIssueType.ATTACHMENT_STATS,
+    EIssueType.DATA_ARCHIVING_RETENTION,
   ],
 };
