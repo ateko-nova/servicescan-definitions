@@ -366,3 +366,35 @@ export type TASyncAjaxMethodsSection = TSectionTemplate<{
     URL: string;
   }[];
 }>;
+
+/**
+ * Detects usage of deprecated ServiceNow APIs in scripts and provides modern alternatives
+ */
+export type TDeprecatedApisSection = TSectionTemplate<{
+  issueType: EIssueType.DEPRECATED_APIS;
+  sectionConfig: {
+    tablesScanned: number;
+    totalScriptsScanned: number;
+    uniqueDeprecatedApisFound: number;
+    totalOccurrences: number;
+  };
+  scanDetails: {
+    deprecatedApi: string;
+    modernAlternative: string;
+    /** Short explanation of why continuing to use this API is risky */
+    riskDescription: string;
+    /** Before/after code example showing how to migrate */
+    migrationExample?: string;
+    /** Link to the official ServiceNow documentation for this deprecated API */
+    snDocUrl?: string;
+    sourceTable: string;
+    scriptField: string;
+    recordName: string;
+    recordSysId: string;
+    active: boolean;
+    codeSnippet: string; // Truncated to ~200 chars
+    severity: string; // 'critical' | 'high' | 'medium' | 'low'
+    deprecatedSince?: string;
+    occurrenceCount: number;
+  }[];
+}>;
