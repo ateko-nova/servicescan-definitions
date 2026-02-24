@@ -52,7 +52,6 @@ export enum EIssueType {
   ATTACHMENT_STATS = 28,
   SOFTWARE_ENTITLEMENTS = 29,
   DATA_ARCHIVING_RETENTION = 30,
-  HELLO_WORLD = 9999,
 }
 
 //export type EIssueTypeExcludeMonthly = Exclude<EIssueType, EIssueType.MONTHLY_REPORT>;
@@ -87,7 +86,6 @@ export const IssueTypeTitleMap: Record<EIssueType, string> = {
   [EIssueType.ATTACHMENT_STATS]: "Attachment stats",
   [EIssueType.SOFTWARE_ENTITLEMENTS]: "Software Entitlements",
   [EIssueType.DATA_ARCHIVING_RETENTION]: "Data Archiving & Retention",
-  [EIssueType.HELLO_WORLD]: "Hello World!",
 };
 
 export const CategoryToIssueTypesMap: Record<ECategory, EIssueType[]> = {
