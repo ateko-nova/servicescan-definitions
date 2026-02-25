@@ -101,7 +101,6 @@ export const CategoryToIssueTypesMap: Record<ECategory, EIssueType[]> = {
 
   [ECategory.MANAGEABILITY]: [
     EIssueType.INSTANCE_ERROR_LOGS,
-    EIssueType.MESSAGING_INFRASTRUCTURE_HEALTH,
     EIssueType.DUPLICATE_SCRIPT_INCLUDES,
     EIssueType.DUPLICATE_FIELDS,
     EIssueType.DUPLICATE_UPDATE_SETS,
