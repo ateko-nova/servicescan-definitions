@@ -396,5 +396,11 @@ export type TDeprecatedApisSection = TSectionTemplate<{
     severity: string; // 'critical' | 'high' | 'medium' | 'low'
     deprecatedSince?: string;
     occurrenceCount: number;
+    /**
+     * The regex search pattern (as stored in the catalog) used to detect this API
+     * during the scan. Passed to the UI so highlights are produced by the
+     * exact same regex — avoiding false positives or missed matches.
+     */
+    searchPattern: string;
   }[];
 }>;
