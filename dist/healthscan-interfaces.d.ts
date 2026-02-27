@@ -372,4 +372,21 @@ export type TDeprecatedApisSection = TSectionTemplate<{
         searchPattern: string;
     }[];
 }>;
+export type TMessagingInfrastructureHealthSection = TSectionTemplate<{
+    issueType: EIssueType.MESSAGING_INFRASTRUCTURE_HEALTH;
+    sectionConfig: {
+        timeRangeDays: number;
+        totalIssuesFound: number;
+    };
+    scanDetails: {
+        logSource: string;
+        severity: "Critical" | "Error" | "Warning";
+        message: string;
+        errorCount: number;
+        firstOccurrence: string;
+        lastOccurrence: string;
+        URL: string;
+        additionalDetails?: string;
+    }[];
+}>;
 export {};
