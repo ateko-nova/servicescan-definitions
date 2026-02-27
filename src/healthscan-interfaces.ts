@@ -425,6 +425,7 @@ export type TDatabasePerformanceAnalysisSection = TSectionTemplate<{
     fields: {
       fieldName: string;
       isIndexed: boolean;
+      internal_type: string;
     }[];
   }[];
 }>;
