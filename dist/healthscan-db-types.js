@@ -56,6 +56,7 @@ var EIssueType;
     EIssueType[EIssueType["SOFTWARE_ENTITLEMENTS"] = 29] = "SOFTWARE_ENTITLEMENTS";
     EIssueType[EIssueType["DEPRECATED_APIS"] = 30] = "DEPRECATED_APIS";
     EIssueType[EIssueType["MESSAGING_INFRASTRUCTURE_HEALTH"] = 31] = "MESSAGING_INFRASTRUCTURE_HEALTH";
+    EIssueType[EIssueType["ACCESS_CONTROL_MODEL"] = 32] = "ACCESS_CONTROL_MODEL";
 })(EIssueType || (exports.EIssueType = EIssueType = {}));
 //export type EIssueTypeExcludeMonthly = Exclude<EIssueType, EIssueType.MONTHLY_REPORT>;
 exports.IssueTypeTitleMap = {
@@ -88,6 +89,7 @@ exports.IssueTypeTitleMap = {
     [EIssueType.SOFTWARE_ENTITLEMENTS]: "Software Entitlements",
     [EIssueType.DEPRECATED_APIS]: "Use of Deprecated APIs",
     [EIssueType.MESSAGING_INFRASTRUCTURE_HEALTH]: "Messaging Infrastructure Health",
+    [EIssueType.ACCESS_CONTROL_MODEL]: "Access Control Model",
 };
 exports.CategoryToIssueTypesMap = {
     [ECategory.UX_UI]: [
@@ -120,6 +122,7 @@ exports.CategoryToIssueTypesMap = {
         EIssueType.ASYNC_AJAX_METHODS,
         EIssueType.SCRIPT_INCLUDE_NO_ACL,
         EIssueType.ADMIN_ROLE_REPORT,
+        EIssueType.ACCESS_CONTROL_MODEL,
     ],
     [ECategory.PERFORMANCE]: [
         EIssueType.SLOW_QUERIES,

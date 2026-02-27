@@ -53,6 +53,7 @@ export enum EIssueType {
   SOFTWARE_ENTITLEMENTS = 29,
   DEPRECATED_APIS = 30,
   MESSAGING_INFRASTRUCTURE_HEALTH = 31,
+  ACCESS_CONTROL_MODEL = 32
 }
 
 //export type EIssueTypeExcludeMonthly = Exclude<EIssueType, EIssueType.MONTHLY_REPORT>;
@@ -89,6 +90,7 @@ export const IssueTypeTitleMap: Record<EIssueType, string> = {
   [EIssueType.DEPRECATED_APIS]: "Use of Deprecated APIs",
   [EIssueType.MESSAGING_INFRASTRUCTURE_HEALTH]:
     "Messaging Infrastructure Health",
+  [EIssueType.ACCESS_CONTROL_MODEL]: "Access Control Model",
 };
 
 export const CategoryToIssueTypesMap: Record<ECategory, EIssueType[]> = {
@@ -125,6 +127,7 @@ export const CategoryToIssueTypesMap: Record<ECategory, EIssueType[]> = {
     EIssueType.ASYNC_AJAX_METHODS,
     EIssueType.SCRIPT_INCLUDE_NO_ACL,
     EIssueType.ADMIN_ROLE_REPORT,
+    EIssueType.ACCESS_CONTROL_MODEL,
   ],
 
   [ECategory.PERFORMANCE]: [
