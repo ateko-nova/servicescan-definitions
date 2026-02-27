@@ -416,3 +416,15 @@ export type TMessagingInfrastructureHealthSection = TSectionTemplate<{
     additionalDetails?: string;
   }[];
 }>;
+
+export type TDatabasePerformanceAnalysisSection = TSectionTemplate<{
+  issueType: EIssueType.DATABASE_PERFORMANCE_ANALYSIS;
+  sectionConfig: {};
+  scanDetails: {
+    tableName: string;
+    fields: {
+      fieldName: string;
+      isIndexed: boolean;
+    }[];
+  }[];
+}>;
