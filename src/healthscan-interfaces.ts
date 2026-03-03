@@ -423,14 +423,14 @@ export type TAccessControlModelSection = TSectionTemplate<{
     listACLLinks?: boolean;
   };
   scanDetails: {
-    editedACLs:{
+    editedACLs?:{
       id: string;
       url: string;
       name: string;
       dateModified: string;
       modifiedBy: string;
     },
-    customRoles:{
+    customRoles?:{
       id: string;
       url: string;
       name: string;
