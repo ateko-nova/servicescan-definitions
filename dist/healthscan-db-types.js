@@ -61,6 +61,7 @@ var EIssueType;
     EIssueType[EIssueType["ACCESS_CONTROL_MODEL"] = 34] = "ACCESS_CONTROL_MODEL";
     EIssueType[EIssueType["UNUSED_LICENSES"] = 35] = "UNUSED_LICENSES";
     EIssueType[EIssueType["PORTAL_WORKSPACE_CUSTOMIZATION_REVIEW"] = 36] = "PORTAL_WORKSPACE_CUSTOMIZATION_REVIEW";
+    EIssueType[EIssueType["CODE_SECURITY_ANALYSIS"] = 37] = "CODE_SECURITY_ANALYSIS";
 })(EIssueType || (exports.EIssueType = EIssueType = {}));
 //export type EIssueTypeExcludeMonthly = Exclude<EIssueType, EIssueType.MONTHLY_REPORT>;
 exports.IssueTypeTitleMap = {
@@ -98,6 +99,7 @@ exports.IssueTypeTitleMap = {
     [EIssueType.ACCESS_CONTROL_MODEL]: "Access Control Model",
     [EIssueType.UNUSED_LICENSES]: "Unused Licenses Identification",
     [EIssueType.PORTAL_WORKSPACE_CUSTOMIZATION_REVIEW]: "Portal & Workspace Customization Review",
+    [EIssueType.CODE_SECURITY_ANALYSIS]: "Code Security Analysis",
 };
 exports.CategoryToIssueTypesMap = {
     [ECategory.UX_UI]: [
@@ -133,6 +135,7 @@ exports.CategoryToIssueTypesMap = {
         EIssueType.SCRIPT_INCLUDE_NO_ACL,
         EIssueType.ADMIN_ROLE_REPORT,
         EIssueType.ACCESS_CONTROL_MODEL,
+        EIssueType.CODE_SECURITY_ANALYSIS,
     ],
     [ECategory.PERFORMANCE]: [
         EIssueType.SLOW_QUERIES,
