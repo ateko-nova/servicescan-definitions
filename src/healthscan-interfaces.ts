@@ -422,3 +422,24 @@ export type TMessagingInfrastructureHealthSection = TSectionTemplate<{
     additionalDetails?: string;
   }[];
 }>;
+
+export type TDatabasePerformanceAnalysisSection = TSectionTemplate<{
+  issueType: EIssueType.DATABASE_PERFORMANCE_ANALYSIS;
+  sectionConfig: {};
+  scanDetails: {
+    url: string; // url to the slow query
+    execTimeInMS: number; // query exec time in ms
+    query: string; // the internal servicenow mysql slow query
+    hhmmss: string; // exect ime in hh mms ss
+    count: number; // how many times it was run
+    lastRunDate: string;
+
+    // decomposed tableNames and fieldNames present in the internal mysql servicenow query
+    fields: Array<{
+      tableName: string; // servicenow table name
+      fieldName: string; // servicenow field belonging to the table
+      isIndexed: boolean;
+      internal_type: string;
+    }>;
+  }[];
+}>;

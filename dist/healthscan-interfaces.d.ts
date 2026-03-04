@@ -389,4 +389,22 @@ export type TMessagingInfrastructureHealthSection = TSectionTemplate<{
         additionalDetails?: string;
     }[];
 }>;
+export type TDatabasePerformanceAnalysisSection = TSectionTemplate<{
+    issueType: EIssueType.DATABASE_PERFORMANCE_ANALYSIS;
+    sectionConfig: {};
+    scanDetails: {
+        url: string;
+        execTimeInMS: number;
+        query: string;
+        hhmmss: string;
+        count: number;
+        lastRunDate: string;
+        fields: Array<{
+            tableName: string;
+            fieldName: string;
+            isIndexed: boolean;
+            internal_type: string;
+        }>;
+    }[];
+}>;
 export {};
