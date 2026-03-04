@@ -57,7 +57,7 @@ var EIssueType;
     EIssueType[EIssueType["DEPRECATED_APIS"] = 30] = "DEPRECATED_APIS";
     EIssueType[EIssueType["MESSAGING_INFRASTRUCTURE_HEALTH"] = 31] = "MESSAGING_INFRASTRUCTURE_HEALTH";
     EIssueType[EIssueType["DATABASE_PERFORMANCE_ANALYSIS"] = 32] = "DATABASE_PERFORMANCE_ANALYSIS";
-    EIssueType[EIssueType["DATA_ARCHIVING_RETENTION"] = 30] = "DATA_ARCHIVING_RETENTION";
+    EIssueType[EIssueType["DATA_ARCHIVING_RETENTION"] = 33] = "DATA_ARCHIVING_RETENTION";
 })(EIssueType || (exports.EIssueType = EIssueType = {}));
 //export type EIssueTypeExcludeMonthly = Exclude<EIssueType, EIssueType.MONTHLY_REPORT>;
 exports.IssueTypeTitleMap = {
