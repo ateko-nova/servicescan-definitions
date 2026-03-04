@@ -54,8 +54,9 @@ var EIssueType;
     //MONTHLY_REPORT=27,
     EIssueType[EIssueType["ATTACHMENT_STATS"] = 28] = "ATTACHMENT_STATS";
     EIssueType[EIssueType["SOFTWARE_ENTITLEMENTS"] = 29] = "SOFTWARE_ENTITLEMENTS";
-    EIssueType[EIssueType["DATA_ARCHIVING_RETENTION"] = 30] = "DATA_ARCHIVING_RETENTION";
-    EIssueType[EIssueType["HELLO_WORLD"] = 9999] = "HELLO_WORLD";
+    EIssueType[EIssueType["DEPRECATED_APIS"] = 30] = "DEPRECATED_APIS";
+    EIssueType[EIssueType["MESSAGING_INFRASTRUCTURE_HEALTH"] = 31] = "MESSAGING_INFRASTRUCTURE_HEALTH";
+    EIssueType[EIssueType["DATABASE_PERFORMANCE_ANALYSIS"] = 32] = "DATABASE_PERFORMANCE_ANALYSIS";
 })(EIssueType || (exports.EIssueType = EIssueType = {}));
 //export type EIssueTypeExcludeMonthly = Exclude<EIssueType, EIssueType.MONTHLY_REPORT>;
 exports.IssueTypeTitleMap = {
@@ -86,8 +87,9 @@ exports.IssueTypeTitleMap = {
     [EIssueType.UNDERUSED_LICENSES]: "Underutilized Licenses",
     [EIssueType.ATTACHMENT_STATS]: "Attachment stats",
     [EIssueType.SOFTWARE_ENTITLEMENTS]: "Software Entitlements",
-    [EIssueType.DATA_ARCHIVING_RETENTION]: "Data Archiving & Retention",
-    [EIssueType.HELLO_WORLD]: "Hello World!",
+    [EIssueType.DEPRECATED_APIS]: "Use of Deprecated APIs",
+    [EIssueType.MESSAGING_INFRASTRUCTURE_HEALTH]: "Messaging Infrastructure Health",
+    [EIssueType.DATABASE_PERFORMANCE_ANALYSIS]: "Database Performance Analysis",
 };
 exports.CategoryToIssueTypesMap = {
     [ECategory.UX_UI]: [
@@ -103,12 +105,14 @@ exports.CategoryToIssueTypesMap = {
         EIssueType.DUPLICATE_UPDATE_SETS,
         EIssueType.SAM_REPORT,
         EIssueType.HAM_REPORT,
+        EIssueType.MESSAGING_INFRASTRUCTURE_HEALTH,
     ],
     [ECategory.UPGRADABILITY]: [
         EIssueType.LAST_SYSTEM_UPGRADE,
         EIssueType.REPORT_3_MONTHS,
         EIssueType.UNDERUSED_LICENSES,
         EIssueType.SOFTWARE_ENTITLEMENTS,
+        EIssueType.DEPRECATED_APIS,
     ],
     [ECategory.SECURITY]: [
         EIssueType.ACL,
@@ -126,6 +130,6 @@ exports.CategoryToIssueTypesMap = {
         EIssueType.LARGE_TABLES,
         EIssueType.INSERTS_IN_BUSINESS_RULES,
         EIssueType.ATTACHMENT_STATS,
-        EIssueType.DATA_ARCHIVING_RETENTION,
+        EIssueType.DATABASE_PERFORMANCE_ANALYSIS,
     ],
 };

@@ -335,16 +335,76 @@ export type TASyncAjaxMethodsSection = TSectionTemplate<{
         URL: string;
     }[];
 }>;
-export type TDataArchivingRetentionSection = TSectionTemplate<{
-    issueType: EIssueType.DATA_ARCHIVING_RETENTION;
+/**
+ * Detects usage of deprecated ServiceNow APIs in scripts and provides modern alternatives
+ */
+export type TDeprecatedApisSection = TSectionTemplate<{
+    issueType: EIssueType.DEPRECATED_APIS;
     sectionConfig: {
-        archiveThreshold: number;
+        tablesScanned: number;
+        totalScriptsScanned: number;
+        uniqueDeprecatedApisFound: number;
+        totalOccurrences: number;
     };
     scanDetails: {
-        tableName: string;
-        recordCount: number;
+        deprecatedApi: string;
+        modernAlternative: string;
+        /** Short explanation of why continuing to use this API is risky */
+        riskDescription: string;
+        /** Before/after code example showing how to migrate */
+        migrationExample?: string;
+        /** Link to the official ServiceNow documentation for this deprecated API */
+        snDocUrl?: string;
+        sourceTable: string;
+        scriptField: string;
+        recordName: string;
+        recordSysId: string;
+        active: boolean;
+        codeSnippet: string;
+        severity: string;
+        deprecatedSince?: string;
+        occurrenceCount: number;
+        /**
+         * The regex search pattern (as stored in the catalog) used to detect this API
+         * during the scan. Passed to the UI so highlights are produced by the
+         * exact same regex — avoiding false positives or missed matches.
+         */
+        searchPattern: string;
+    }[];
+}>;
+export type TMessagingInfrastructureHealthSection = TSectionTemplate<{
+    issueType: EIssueType.MESSAGING_INFRASTRUCTURE_HEALTH;
+    sectionConfig: {
+        timeRangeDays: number;
+        totalIssuesFound: number;
+    };
+    scanDetails: {
+        logSource: string;
+        severity: "Critical" | "Error" | "Warning";
+        message: string;
+        errorCount: number;
+        firstOccurrence: string;
+        lastOccurrence: string;
         URL: string;
-        tableType: "NORMAL" | "CUSTOM" | "SYS" | "TASK";
+        additionalDetails?: string;
+    }[];
+}>;
+export type TDatabasePerformanceAnalysisSection = TSectionTemplate<{
+    issueType: EIssueType.DATABASE_PERFORMANCE_ANALYSIS;
+    sectionConfig: {};
+    scanDetails: {
+        url: string;
+        execTimeInMS: number;
+        query: string;
+        hhmmss: string;
+        count: number;
+        lastRunDate: string;
+        fields: Array<{
+            tableName: string;
+            fieldName: string;
+            isIndexed: boolean;
+            internal_type: string;
+        }>;
     }[];
 }>;
 export {};
