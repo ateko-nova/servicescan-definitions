@@ -407,4 +407,16 @@ export type TDatabasePerformanceAnalysisSection = TSectionTemplate<{
         }>;
     }[];
 }>;
+export type TDataArchivingRetentionSection = TSectionTemplate<{
+    issueType: EIssueType.DATA_ARCHIVING_RETENTION;
+    sectionConfig: {
+        archiveThreshold: number;
+    };
+    scanDetails: {
+        tableName: string;
+        recordCount: number;
+        URL: string;
+        tableType: "NORMAL" | "CUSTOM" | "SYS" | "TASK";
+    }[];
+}>;
 export {};
