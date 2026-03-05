@@ -402,6 +402,7 @@ export type TAccessControlModelSection = TSectionTemplate<{
             name: string;
             associatedACLs: string[];
             recommendation: string;
+            aclRoleTableLink: string;
         };
     }[];
 }>;
