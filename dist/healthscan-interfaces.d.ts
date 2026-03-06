@@ -364,6 +364,12 @@ export type TDeprecatedApisSection = TSectionTemplate<{
         severity: string;
         deprecatedSince?: string;
         occurrenceCount: number;
+        /**
+         * The regex search pattern (as stored in the catalog) used to detect this API
+         * during the scan. Passed to the UI so highlights are produced by the
+         * exact same regex — avoiding false positives or missed matches.
+         */
+        searchPattern: string;
     }[];
 }>;
 export type TMessagingInfrastructureHealthSection = TSectionTemplate<{
@@ -381,6 +387,36 @@ export type TMessagingInfrastructureHealthSection = TSectionTemplate<{
         lastOccurrence: string;
         URL: string;
         additionalDetails?: string;
+    }[];
+}>;
+export type TDatabasePerformanceAnalysisSection = TSectionTemplate<{
+    issueType: EIssueType.DATABASE_PERFORMANCE_ANALYSIS;
+    sectionConfig: {};
+    scanDetails: {
+        url: string;
+        execTimeInMS: number;
+        query: string;
+        hhmmss: string;
+        count: number;
+        lastRunDate: string;
+        fields: Array<{
+            tableName: string;
+            fieldName: string;
+            isIndexed: boolean;
+            internal_type: string;
+        }>;
+    }[];
+}>;
+export type TDataArchivingRetentionSection = TSectionTemplate<{
+    issueType: EIssueType.DATA_ARCHIVING_RETENTION;
+    sectionConfig: {
+        archiveThreshold: number;
+    };
+    scanDetails: {
+        tableName: string;
+        recordCount: number;
+        URL: string;
+        tableType: "NORMAL" | "CUSTOM" | "SYS" | "TASK";
     }[];
 }>;
 export type TAccessControlModelSection = TSectionTemplate<{

@@ -56,7 +56,9 @@ var EIssueType;
     EIssueType[EIssueType["SOFTWARE_ENTITLEMENTS"] = 29] = "SOFTWARE_ENTITLEMENTS";
     EIssueType[EIssueType["DEPRECATED_APIS"] = 30] = "DEPRECATED_APIS";
     EIssueType[EIssueType["MESSAGING_INFRASTRUCTURE_HEALTH"] = 31] = "MESSAGING_INFRASTRUCTURE_HEALTH";
-    EIssueType[EIssueType["ACCESS_CONTROL_MODEL"] = 32] = "ACCESS_CONTROL_MODEL";
+    EIssueType[EIssueType["DATABASE_PERFORMANCE_ANALYSIS"] = 32] = "DATABASE_PERFORMANCE_ANALYSIS";
+    EIssueType[EIssueType["DATA_ARCHIVING_RETENTION"] = 33] = "DATA_ARCHIVING_RETENTION";
+    EIssueType[EIssueType["ACCESS_CONTROL_MODEL"] = 34] = "ACCESS_CONTROL_MODEL";
 })(EIssueType || (exports.EIssueType = EIssueType = {}));
 //export type EIssueTypeExcludeMonthly = Exclude<EIssueType, EIssueType.MONTHLY_REPORT>;
 exports.IssueTypeTitleMap = {
@@ -89,6 +91,8 @@ exports.IssueTypeTitleMap = {
     [EIssueType.SOFTWARE_ENTITLEMENTS]: "Software Entitlements",
     [EIssueType.DEPRECATED_APIS]: "Use of Deprecated APIs",
     [EIssueType.MESSAGING_INFRASTRUCTURE_HEALTH]: "Messaging Infrastructure Health",
+    [EIssueType.DATABASE_PERFORMANCE_ANALYSIS]: "Database Performance Analysis",
+    [EIssueType.DATA_ARCHIVING_RETENTION]: "Data Archiving & Retention",
     [EIssueType.ACCESS_CONTROL_MODEL]: "Access Control Model",
 };
 exports.CategoryToIssueTypesMap = {
@@ -131,5 +135,7 @@ exports.CategoryToIssueTypesMap = {
         EIssueType.LARGE_TABLES,
         EIssueType.INSERTS_IN_BUSINESS_RULES,
         EIssueType.ATTACHMENT_STATS,
+        EIssueType.DATABASE_PERFORMANCE_ANALYSIS,
+        EIssueType.DATA_ARCHIVING_RETENTION,
     ],
 };
