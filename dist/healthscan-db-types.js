@@ -58,6 +58,7 @@ var EIssueType;
     EIssueType[EIssueType["MESSAGING_INFRASTRUCTURE_HEALTH"] = 31] = "MESSAGING_INFRASTRUCTURE_HEALTH";
     EIssueType[EIssueType["DATABASE_PERFORMANCE_ANALYSIS"] = 32] = "DATABASE_PERFORMANCE_ANALYSIS";
     EIssueType[EIssueType["DATA_ARCHIVING_RETENTION"] = 33] = "DATA_ARCHIVING_RETENTION";
+    EIssueType[EIssueType["ACCESS_CONTROL_MODEL"] = 34] = "ACCESS_CONTROL_MODEL";
 })(EIssueType || (exports.EIssueType = EIssueType = {}));
 //export type EIssueTypeExcludeMonthly = Exclude<EIssueType, EIssueType.MONTHLY_REPORT>;
 exports.IssueTypeTitleMap = {
@@ -92,6 +93,7 @@ exports.IssueTypeTitleMap = {
     [EIssueType.MESSAGING_INFRASTRUCTURE_HEALTH]: "Messaging Infrastructure Health",
     [EIssueType.DATABASE_PERFORMANCE_ANALYSIS]: "Database Performance Analysis",
     [EIssueType.DATA_ARCHIVING_RETENTION]: "Data Archiving & Retention",
+    [EIssueType.ACCESS_CONTROL_MODEL]: "Access Control Model",
 };
 exports.CategoryToIssueTypesMap = {
     [ECategory.UX_UI]: [
@@ -124,6 +126,7 @@ exports.CategoryToIssueTypesMap = {
         EIssueType.ASYNC_AJAX_METHODS,
         EIssueType.SCRIPT_INCLUDE_NO_ACL,
         EIssueType.ADMIN_ROLE_REPORT,
+        EIssueType.ACCESS_CONTROL_MODEL,
     ],
     [ECategory.PERFORMANCE]: [
         EIssueType.SLOW_QUERIES,

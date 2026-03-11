@@ -419,4 +419,27 @@ export type TDataArchivingRetentionSection = TSectionTemplate<{
         tableType: "NORMAL" | "CUSTOM" | "SYS" | "TASK";
     }[];
 }>;
+export type TAccessControlModelSection = TSectionTemplate<{
+    issueType: EIssueType.ACCESS_CONTROL_MODEL;
+    sectionConfig: {
+        listACLLinks?: boolean;
+    };
+    scanDetails: {
+        editedACLs?: {
+            id: string;
+            url: string;
+            name: string;
+            dateModified: string;
+            modifiedBy: string;
+        };
+        customRoles?: {
+            id: string;
+            url: string;
+            name: string;
+            associatedACLs: string[];
+            recommendation: string;
+            aclRoleTableLink: string;
+        };
+    }[];
+}>;
 export {};
