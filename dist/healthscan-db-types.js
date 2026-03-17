@@ -60,6 +60,7 @@ var EIssueType;
     EIssueType[EIssueType["DATA_ARCHIVING_RETENTION"] = 33] = "DATA_ARCHIVING_RETENTION";
     EIssueType[EIssueType["ACCESS_CONTROL_MODEL"] = 34] = "ACCESS_CONTROL_MODEL";
     EIssueType[EIssueType["UNUSED_LICENSES"] = 35] = "UNUSED_LICENSES";
+    EIssueType[EIssueType["PORTAL_WORKSPACE_CUSTOMIZATION_REVIEW"] = 36] = "PORTAL_WORKSPACE_CUSTOMIZATION_REVIEW";
 })(EIssueType || (exports.EIssueType = EIssueType = {}));
 //export type EIssueTypeExcludeMonthly = Exclude<EIssueType, EIssueType.MONTHLY_REPORT>;
 exports.IssueTypeTitleMap = {
@@ -96,6 +97,7 @@ exports.IssueTypeTitleMap = {
     [EIssueType.DATA_ARCHIVING_RETENTION]: "Data Archiving & Retention",
     [EIssueType.ACCESS_CONTROL_MODEL]: "Access Control Model",
     [EIssueType.UNUSED_LICENSES]: "Unused Licenses Identification",
+    [EIssueType.PORTAL_WORKSPACE_CUSTOMIZATION_REVIEW]: "Portal & Workspace Customization Review",
 };
 exports.CategoryToIssueTypesMap = {
     [ECategory.UX_UI]: [
@@ -103,6 +105,7 @@ exports.CategoryToIssueTypesMap = {
         EIssueType.GLOBAL_UI_SCRIPTS,
         EIssueType.BUSY_FORMS,
         EIssueType.TOO_MANY_CHOICES,
+        EIssueType.PORTAL_WORKSPACE_CUSTOMIZATION_REVIEW,
     ],
     [ECategory.MANAGEABILITY]: [
         EIssueType.INSTANCE_ERROR_LOGS,

@@ -57,6 +57,7 @@ export enum EIssueType {
   DATA_ARCHIVING_RETENTION = 33,
   ACCESS_CONTROL_MODEL = 34,
   UNUSED_LICENSES = 35,
+  PORTAL_WORKSPACE_CUSTOMIZATION_REVIEW = 36,
 }
 
 //export type EIssueTypeExcludeMonthly = Exclude<EIssueType, EIssueType.MONTHLY_REPORT>;
@@ -97,6 +98,8 @@ export const IssueTypeTitleMap: Record<EIssueType, string> = {
   [EIssueType.DATA_ARCHIVING_RETENTION]: "Data Archiving & Retention",
   [EIssueType.ACCESS_CONTROL_MODEL]: "Access Control Model",
   [EIssueType.UNUSED_LICENSES]: "Unused Licenses Identification",
+  [EIssueType.PORTAL_WORKSPACE_CUSTOMIZATION_REVIEW]:
+    "Portal & Workspace Customization Review",
 };
 
 export const CategoryToIssueTypesMap: Record<ECategory, EIssueType[]> = {
@@ -105,6 +108,7 @@ export const CategoryToIssueTypesMap: Record<ECategory, EIssueType[]> = {
     EIssueType.GLOBAL_UI_SCRIPTS,
     EIssueType.BUSY_FORMS,
     EIssueType.TOO_MANY_CHOICES,
+    EIssueType.PORTAL_WORKSPACE_CUSTOMIZATION_REVIEW,
   ],
 
   [ECategory.MANAGEABILITY]: [
