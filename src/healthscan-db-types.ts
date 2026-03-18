@@ -55,7 +55,8 @@ export enum EIssueType {
   MESSAGING_INFRASTRUCTURE_HEALTH = 31,
   DATABASE_PERFORMANCE_ANALYSIS = 32,
   DATA_ARCHIVING_RETENTION = 33,
-  ACCESS_CONTROL_MODEL = 34
+  ACCESS_CONTROL_MODEL = 34,
+  UNUSED_LICENSES = 35,
 }
 
 //export type EIssueTypeExcludeMonthly = Exclude<EIssueType, EIssueType.MONTHLY_REPORT>;
@@ -95,6 +96,7 @@ export const IssueTypeTitleMap: Record<EIssueType, string> = {
   [EIssueType.DATABASE_PERFORMANCE_ANALYSIS]: "Database Performance Analysis",
   [EIssueType.DATA_ARCHIVING_RETENTION]: "Data Archiving & Retention",
   [EIssueType.ACCESS_CONTROL_MODEL]: "Access Control Model",
+  [EIssueType.UNUSED_LICENSES]: "Unused Licenses Identification",
 };
 
 export const CategoryToIssueTypesMap: Record<ECategory, EIssueType[]> = {
@@ -121,6 +123,7 @@ export const CategoryToIssueTypesMap: Record<ECategory, EIssueType[]> = {
     EIssueType.UNDERUSED_LICENSES,
     EIssueType.SOFTWARE_ENTITLEMENTS,
     EIssueType.DEPRECATED_APIS,
+    EIssueType.UNUSED_LICENSES,
   ],
 
   [ECategory.SECURITY]: [
