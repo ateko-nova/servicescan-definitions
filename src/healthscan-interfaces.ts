@@ -355,6 +355,31 @@ export type TUnderusedLicensesSection = TSectionTemplate<{
   }[];
 }>;
 
+export type TUnusedLicensesSection = TSectionTemplate<{
+  issueType: EIssueType.UNUSED_LICENSES;
+  sectionConfig: {};
+  scanDetails: {
+    subscription: string;
+    url: string;
+    entitlements: Array<{
+      name: string;
+      categoryId: string;
+      url: string;
+      relatedPlugins: Array<{
+        name: string;
+        id: string;
+        status: "Inactive" | "Active";
+        url: string;
+      }>;
+      storeApplications: Array<{
+        name: string;
+        id: string;
+        url: string;
+      }>;
+    }>;
+  }[];
+}>;
+
 export type TASyncAjaxMethodsSection = TSectionTemplate<{
   issueType: EIssueType.ASYNC_AJAX_METHODS;
   sectionConfig: {};
@@ -463,20 +488,20 @@ export type TAccessControlModelSection = TSectionTemplate<{
     listACLLinks?: boolean;
   };
   scanDetails: {
-    editedACLs?:{
+    editedACLs?: {
       id: string;
       url: string;
       name: string;
       dateModified: string;
       modifiedBy: string;
-    },
-    customRoles?:{
+    };
+    customRoles?: {
       id: string;
       url: string;
       name: string;
       associatedACLs: string[];
       recommendation: string;
       aclRoleTableLink: string;
-    }
+    };
   }[];
 }>;
