@@ -439,6 +439,7 @@ export type TAccessControlModelSection = TSectionTemplate<{
             associatedACLs: string[];
             recommendation: string;
             aclRoleTableLink: string;
+            ootbRoleLink: string;
         };
     }[];
 }>;
