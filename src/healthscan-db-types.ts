@@ -55,7 +55,8 @@ export enum EIssueType {
   MESSAGING_INFRASTRUCTURE_HEALTH = 31,
   DATABASE_PERFORMANCE_ANALYSIS = 32,
   DATA_ARCHIVING_RETENTION = 33,
-  ACCESS_CONTROL_MODEL = 34
+  ACCESS_CONTROL_MODEL = 34,
+  API_INTEGRATION = 35,
 }
 
 //export type EIssueTypeExcludeMonthly = Exclude<EIssueType, EIssueType.MONTHLY_REPORT>;
@@ -95,6 +96,7 @@ export const IssueTypeTitleMap: Record<EIssueType, string> = {
   [EIssueType.DATABASE_PERFORMANCE_ANALYSIS]: "Database Performance Analysis",
   [EIssueType.DATA_ARCHIVING_RETENTION]: "Data Archiving & Retention",
   [EIssueType.ACCESS_CONTROL_MODEL]: "Access Control Model",
+  [EIssueType.API_INTEGRATION]: "API and Integration Performance",
 };
 
 export const CategoryToIssueTypesMap: Record<ECategory, EIssueType[]> = {
@@ -143,5 +145,6 @@ export const CategoryToIssueTypesMap: Record<ECategory, EIssueType[]> = {
     EIssueType.ATTACHMENT_STATS,
     EIssueType.DATABASE_PERFORMANCE_ANALYSIS,
     EIssueType.DATA_ARCHIVING_RETENTION,
+    EIssueType.API_INTEGRATION
   ],
 };

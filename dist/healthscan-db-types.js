@@ -59,6 +59,7 @@ var EIssueType;
     EIssueType[EIssueType["DATABASE_PERFORMANCE_ANALYSIS"] = 32] = "DATABASE_PERFORMANCE_ANALYSIS";
     EIssueType[EIssueType["DATA_ARCHIVING_RETENTION"] = 33] = "DATA_ARCHIVING_RETENTION";
     EIssueType[EIssueType["ACCESS_CONTROL_MODEL"] = 34] = "ACCESS_CONTROL_MODEL";
+    EIssueType[EIssueType["API_INTEGRATION"] = 35] = "API_INTEGRATION";
 })(EIssueType || (exports.EIssueType = EIssueType = {}));
 //export type EIssueTypeExcludeMonthly = Exclude<EIssueType, EIssueType.MONTHLY_REPORT>;
 exports.IssueTypeTitleMap = {
@@ -94,6 +95,7 @@ exports.IssueTypeTitleMap = {
     [EIssueType.DATABASE_PERFORMANCE_ANALYSIS]: "Database Performance Analysis",
     [EIssueType.DATA_ARCHIVING_RETENTION]: "Data Archiving & Retention",
     [EIssueType.ACCESS_CONTROL_MODEL]: "Access Control Model",
+    [EIssueType.API_INTEGRATION]: "API and Integration Performance",
 };
 exports.CategoryToIssueTypesMap = {
     [ECategory.UX_UI]: [
@@ -137,5 +139,6 @@ exports.CategoryToIssueTypesMap = {
         EIssueType.ATTACHMENT_STATS,
         EIssueType.DATABASE_PERFORMANCE_ANALYSIS,
         EIssueType.DATA_ARCHIVING_RETENTION,
+        EIssueType.API_INTEGRATION
     ],
 };

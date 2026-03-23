@@ -442,4 +442,18 @@ export type TAccessControlModelSection = TSectionTemplate<{
         };
     }[];
 }>;
+export type TApiIntegrationSection = TSectionTemplate<{
+    issueType: EIssueType.API_INTEGRATION;
+    sectionConfig: {};
+    scanDetails: {
+        id: string;
+        url: string;
+        user?: string;
+        direction: "inbound" | "outbound";
+        startTime: string;
+        responseTimeMs: number;
+        httpStatus?: number;
+        ipAddress?: string;
+    }[];
+}>;
 export {};
