@@ -53,13 +53,22 @@ export type TACLDBLookupSection = TSectionTemplate<{
 
 export type TACLSection = TSectionTemplate<{
   issueType: EIssueType.ACL;
-  sectionConfig: {};
+  sectionConfig: {
+    totalACLsReviewed: number;
+    criticalRiskCount: number;
+    highRiskCount: number;
+    mediumRiskCount: number;
+    lowRiskCount: number;
+    suppressedNoiseCount: number;
+  };
   scanDetails: {
     name: string;
     id: string;
     URL?: string;
     operation: string;
     description: string;
+    tableName?: string;
+    fieldName?: string;
     groups?: Array<{
       type: string;
       name: string;
@@ -67,6 +76,21 @@ export type TACLSection = TSectionTemplate<{
     reasons?: Array<{
       reason: string;
     }>;
+    // NEW: Risk scoring & enrichment
+    riskScore?: number;
+    riskLevel?: "critical" | "high" | "medium" | "low" | "suppressed";
+    tableSensitivity?: "critical" | "high" | "medium" | "low";
+    operationWeight?: number;
+    accessExpansion?: string;
+    scriptBasedCondition?: boolean;
+    scriptCode?: string;
+    hasPermissiveScript?: boolean;
+    lastModifiedBy?: string;
+    lastModifiedDate?: string;
+    origin?: "custom" | "platform" | "app";
+    recommendation?: string;
+    relatedFields?: string[];
+    suppressionReason?: string;
   }[];
 }>;
 
@@ -527,5 +551,35 @@ export type TPortalWorkspaceCustomizationReviewSection = TSectionTemplate<{
     reason: string;
     URL: string;
     evidence: Record<string, string | number | boolean | null>;
+  }[];
+}>;
+
+/**
+ * Scans ServiceNow script tables for security vulnerabilities such as
+ * injection risks, privilege escalation, hardcoded credentials, unsafe
+ * API usage, and missing input validation.
+ */
+export type TCodeSecurityAnalysisSection = TSectionTemplate<{
+  issueType: EIssueType.CODE_SECURITY_ANALYSIS;
+  sectionConfig: {
+    tablesScanned: number;
+    totalScriptsScanned: number;
+    totalVulnerabilitiesFound: number;
+    uniqueVulnerabilityTypes: number;
+  };
+  scanDetails: {
+    vulnerabilityType: string;
+    severity: "critical" | "high" | "medium" | "low";
+    description: string;
+    sourceTable: string;
+    scriptField: string;
+    recordName: string;
+    recordSysId: string;
+    active: boolean;
+    codeSnippet: string;
+    recommendation: string;
+    searchPattern: string;
+    occurrenceCount: number;
+    cweId?: string;
   }[];
 }>;

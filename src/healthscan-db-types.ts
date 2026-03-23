@@ -58,6 +58,7 @@ export enum EIssueType {
   ACCESS_CONTROL_MODEL = 34,
   UNUSED_LICENSES = 35,
   PORTAL_WORKSPACE_CUSTOMIZATION_REVIEW = 36,
+  CODE_SECURITY_ANALYSIS = 37,
 }
 
 //export type EIssueTypeExcludeMonthly = Exclude<EIssueType, EIssueType.MONTHLY_REPORT>;
@@ -100,6 +101,7 @@ export const IssueTypeTitleMap: Record<EIssueType, string> = {
   [EIssueType.UNUSED_LICENSES]: "Unused Licenses Identification",
   [EIssueType.PORTAL_WORKSPACE_CUSTOMIZATION_REVIEW]:
     "Portal & Workspace Customization Review",
+  [EIssueType.CODE_SECURITY_ANALYSIS]: "Code Security Analysis",
 };
 
 export const CategoryToIssueTypesMap: Record<ECategory, EIssueType[]> = {
@@ -139,6 +141,7 @@ export const CategoryToIssueTypesMap: Record<ECategory, EIssueType[]> = {
     EIssueType.SCRIPT_INCLUDE_NO_ACL,
     EIssueType.ADMIN_ROLE_REPORT,
     EIssueType.ACCESS_CONTROL_MODEL,
+    EIssueType.CODE_SECURITY_ANALYSIS,
   ],
 
   [ECategory.PERFORMANCE]: [
