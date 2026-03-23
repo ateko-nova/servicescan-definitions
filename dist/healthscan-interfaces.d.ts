@@ -466,4 +466,23 @@ export type TAccessControlModelSection = TSectionTemplate<{
         };
     }[];
 }>;
+export type TPortalWorkspaceCustomizationReviewSection = TSectionTemplate<{
+    issueType: EIssueType.PORTAL_WORKSPACE_CUSTOMIZATION_REVIEW;
+    sectionConfig: {
+        scannedTables: string[];
+        includeWorkspaceTables: boolean;
+        totalFindings: number;
+    };
+    scanDetails: {
+        findingType: "public_page" | "customized_ootb" | "custom_public_definition" | "route_exposure";
+        sourceTable: string;
+        recordSysId: string;
+        recordName: string;
+        severity: "medium" | "medium-high" | "high";
+        riskCategory: "security" | "upgradeability" | "maintainability";
+        reason: string;
+        URL: string;
+        evidence: Record<string, string | number | boolean | null>;
+    }[];
+}>;
 export {};
