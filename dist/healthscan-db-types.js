@@ -62,6 +62,7 @@ var EIssueType;
     EIssueType[EIssueType["UNUSED_LICENSES"] = 35] = "UNUSED_LICENSES";
     EIssueType[EIssueType["PORTAL_WORKSPACE_CUSTOMIZATION_REVIEW"] = 36] = "PORTAL_WORKSPACE_CUSTOMIZATION_REVIEW";
     EIssueType[EIssueType["CODE_SECURITY_ANALYSIS"] = 37] = "CODE_SECURITY_ANALYSIS";
+    EIssueType[EIssueType["MID_SERVERS_HEALTH"] = 38] = "MID_SERVERS_HEALTH";
 })(EIssueType || (exports.EIssueType = EIssueType = {}));
 //export type EIssueTypeExcludeMonthly = Exclude<EIssueType, EIssueType.MONTHLY_REPORT>;
 exports.IssueTypeTitleMap = {
@@ -100,6 +101,7 @@ exports.IssueTypeTitleMap = {
     [EIssueType.UNUSED_LICENSES]: "Unused Licenses Identification",
     [EIssueType.PORTAL_WORKSPACE_CUSTOMIZATION_REVIEW]: "Portal & Workspace Customization Review",
     [EIssueType.CODE_SECURITY_ANALYSIS]: "Code Security Analysis",
+    [EIssueType.MID_SERVERS_HEALTH]: "Mid Servers Health",
 };
 exports.CategoryToIssueTypesMap = {
     [ECategory.UX_UI]: [
@@ -146,5 +148,6 @@ exports.CategoryToIssueTypesMap = {
         EIssueType.ATTACHMENT_STATS,
         EIssueType.DATABASE_PERFORMANCE_ANALYSIS,
         EIssueType.DATA_ARCHIVING_RETENTION,
+        EIssueType.MID_SERVERS_HEALTH,
     ],
 };

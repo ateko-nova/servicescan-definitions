@@ -514,4 +514,9 @@ export type TCodeSecurityAnalysisSection = TSectionTemplate<{
         cweId?: string;
     }[];
 }>;
+export type TMidServersHealth = TSectionTemplate<{
+    issueType: EIssueType.MID_SERVERS_HEALTH;
+    sectionConfig: {};
+    scanDetails: {}[];
+}>;
 export {};
