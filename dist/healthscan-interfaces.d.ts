@@ -45,22 +45,13 @@ export type TACLDBLookupSection = TSectionTemplate<{
 }>;
 export type TACLSection = TSectionTemplate<{
     issueType: EIssueType.ACL;
-    sectionConfig: {
-        totalACLsReviewed: number;
-        criticalRiskCount: number;
-        highRiskCount: number;
-        mediumRiskCount: number;
-        lowRiskCount: number;
-        suppressedNoiseCount: number;
-    };
+    sectionConfig: {};
     scanDetails: {
         name: string;
         id: string;
         URL?: string;
         operation: string;
         description: string;
-        tableName?: string;
-        fieldName?: string;
         groups?: Array<{
             type: string;
             name: string;
@@ -68,20 +59,6 @@ export type TACLSection = TSectionTemplate<{
         reasons?: Array<{
             reason: string;
         }>;
-        riskScore?: number;
-        riskLevel?: "critical" | "high" | "medium" | "low" | "suppressed";
-        tableSensitivity?: "critical" | "high" | "medium" | "low";
-        operationWeight?: number;
-        accessExpansion?: string;
-        scriptBasedCondition?: boolean;
-        scriptCode?: string;
-        hasPermissiveScript?: boolean;
-        lastModifiedBy?: string;
-        lastModifiedDate?: string;
-        origin?: "custom" | "platform" | "app";
-        recommendation?: string;
-        relatedFields?: string[];
-        suppressionReason?: string;
     }[];
 }>;
 export type TBusyFormsSection = TSectionTemplate<{
