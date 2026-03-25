@@ -1,15 +1,12 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.CategoryToIssueTypesMap = exports.IssueTypeTitleMap = exports.EIssueType = exports.CategoryTitleMap = exports.ECategory = void 0;
-var ECategory;
+export var ECategory;
 (function (ECategory) {
     ECategory[ECategory["UX_UI"] = 1] = "UX_UI";
     ECategory[ECategory["MANAGEABILITY"] = 2] = "MANAGEABILITY";
     ECategory[ECategory["UPGRADABILITY"] = 3] = "UPGRADABILITY";
     ECategory[ECategory["SECURITY"] = 4] = "SECURITY";
     ECategory[ECategory["PERFORMANCE"] = 5] = "PERFORMANCE";
-})(ECategory || (exports.ECategory = ECategory = {}));
-exports.CategoryTitleMap = {
+})(ECategory || (ECategory = {}));
+export const CategoryTitleMap = {
     [ECategory.UX_UI]: "UX and UI",
     [ECategory.MANAGEABILITY]: "Manageability",
     [ECategory.UPGRADABILITY]: "Upgradability",
@@ -23,7 +20,7 @@ exports.CategoryTitleMap = {
  *
  * Do not modify existing IDs.
  */
-var EIssueType;
+export var EIssueType;
 (function (EIssueType) {
     EIssueType[EIssueType["SLOW_QUERIES"] = 1] = "SLOW_QUERIES";
     EIssueType[EIssueType["LARGE_TABLES"] = 2] = "LARGE_TABLES";
@@ -62,9 +59,9 @@ var EIssueType;
     EIssueType[EIssueType["UNUSED_LICENSES"] = 35] = "UNUSED_LICENSES";
     EIssueType[EIssueType["PORTAL_WORKSPACE_CUSTOMIZATION_REVIEW"] = 36] = "PORTAL_WORKSPACE_CUSTOMIZATION_REVIEW";
     EIssueType[EIssueType["CODE_SECURITY_ANALYSIS"] = 37] = "CODE_SECURITY_ANALYSIS";
-})(EIssueType || (exports.EIssueType = EIssueType = {}));
+})(EIssueType || (EIssueType = {}));
 //export type EIssueTypeExcludeMonthly = Exclude<EIssueType, EIssueType.MONTHLY_REPORT>;
-exports.IssueTypeTitleMap = {
+export const IssueTypeTitleMap = {
     [EIssueType.SLOW_QUERIES]: "Slow Queries",
     [EIssueType.LARGE_TABLES]: "Large Tables",
     [EIssueType.LONG_TITLES]: "Long Titles",
@@ -101,7 +98,7 @@ exports.IssueTypeTitleMap = {
     [EIssueType.PORTAL_WORKSPACE_CUSTOMIZATION_REVIEW]: "Portal & Workspace Customization Review",
     [EIssueType.CODE_SECURITY_ANALYSIS]: "Code Security Analysis",
 };
-exports.CategoryToIssueTypesMap = {
+export const CategoryToIssueTypesMap = {
     [ECategory.UX_UI]: [
         EIssueType.LONG_TITLES,
         EIssueType.GLOBAL_UI_SCRIPTS,

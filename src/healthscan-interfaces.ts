@@ -1,4 +1,4 @@
-import { EIssueType } from "healthscan-db-types";
+import { EIssueType } from "./healthscan-db-types";
 
 /**
  * Every section must have its corresponding type defined.

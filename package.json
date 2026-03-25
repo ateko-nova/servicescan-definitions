@@ -1,7 +1,8 @@
 {
   "name": "servicescan-definitions",
   "version": "1.0.67",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "npx tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
