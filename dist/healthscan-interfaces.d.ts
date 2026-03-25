@@ -517,6 +517,33 @@ export type TCodeSecurityAnalysisSection = TSectionTemplate<{
 export type TMidServersHealth = TSectionTemplate<{
     issueType: EIssueType.MID_SERVERS_HEALTH;
     sectionConfig: {};
-    scanDetails: {}[];
+    scanDetails: {
+        sys_id: string;
+        name: string;
+        status: string;
+        version: string;
+        validated: string;
+        host_name: string;
+        last_refreshed: string;
+        mean_cpu: number;
+        max_memory: number;
+        cpu_trend: {
+            first_entry_date: string | null;
+            last_entry_date: string | null;
+            average_interval_ms: number;
+            mean_values: number[];
+            url: string;
+        };
+        issues: {
+            list: {
+                message: string;
+                state: string;
+            }[];
+            url: string;
+        };
+        queue_backlog_count: number;
+        ragStatus: "Green" | "Amber" | "Red";
+        url: string;
+    }[];
 }>;
 export {};
