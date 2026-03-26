@@ -598,6 +598,7 @@ export type TMidServersHealth = TSectionTemplate<{
     scanDetails: {
       id: string;
       url: string;
+      nativeUrl: string;
       user?: string;
       direction: "inbound" | "outbound";
       startTime: string;

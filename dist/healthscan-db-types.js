@@ -151,6 +151,6 @@ exports.CategoryToIssueTypesMap = {
         EIssueType.DATABASE_PERFORMANCE_ANALYSIS,
         EIssueType.DATA_ARCHIVING_RETENTION,
         EIssueType.MID_SERVERS_HEALTH,
-        EIssueType.API_INTEGRATION
+        EIssueType.API_INTEGRATION,
     ],
 };
