@@ -324,6 +324,30 @@ export type TUnderusedLicensesSection = TSectionTemplate<{
         poolLicences?: any[];
     }[];
 }>;
+export type TUnusedLicensesSection = TSectionTemplate<{
+    issueType: EIssueType.UNUSED_LICENSES;
+    sectionConfig: {};
+    scanDetails: {
+        subscription: string;
+        url: string;
+        entitlements: Array<{
+            name: string;
+            categoryId: string;
+            url: string;
+            relatedPlugins: Array<{
+                name: string;
+                id: string;
+                status: "Inactive" | "Active";
+                url: string;
+            }>;
+            storeApplications: Array<{
+                name: string;
+                id: string;
+                url: string;
+            }>;
+        }>;
+    }[];
+}>;
 export type TASyncAjaxMethodsSection = TSectionTemplate<{
     issueType: EIssueType.ASYNC_AJAX_METHODS;
     sectionConfig: {};
@@ -440,6 +464,86 @@ export type TAccessControlModelSection = TSectionTemplate<{
             recommendation: string;
             aclRoleTableLink: string;
         };
+    }[];
+}>;
+export type TPortalWorkspaceCustomizationReviewSection = TSectionTemplate<{
+    issueType: EIssueType.PORTAL_WORKSPACE_CUSTOMIZATION_REVIEW;
+    sectionConfig: {
+        scannedTables: string[];
+        includeWorkspaceTables: boolean;
+        totalFindings: number;
+    };
+    scanDetails: {
+        findingType: "public_page" | "customized_ootb" | "custom_public_definition" | "route_exposure";
+        sourceTable: string;
+        recordSysId: string;
+        recordName: string;
+        severity: "medium" | "medium-high" | "high";
+        riskCategory: "security" | "upgradeability" | "maintainability";
+        reason: string;
+        URL: string;
+        evidence: Record<string, string | number | boolean | null>;
+    }[];
+}>;
+/**
+ * Scans ServiceNow script tables for security vulnerabilities such as
+ * injection risks, privilege escalation, hardcoded credentials, unsafe
+ * API usage, and missing input validation.
+ */
+export type TCodeSecurityAnalysisSection = TSectionTemplate<{
+    issueType: EIssueType.CODE_SECURITY_ANALYSIS;
+    sectionConfig: {
+        tablesScanned: number;
+        totalScriptsScanned: number;
+        totalVulnerabilitiesFound: number;
+        uniqueVulnerabilityTypes: number;
+    };
+    scanDetails: {
+        vulnerabilityType: string;
+        severity: "critical" | "high" | "medium" | "low";
+        description: string;
+        sourceTable: string;
+        scriptField: string;
+        recordName: string;
+        recordSysId: string;
+        active: boolean;
+        codeSnippet: string;
+        recommendation: string;
+        searchPattern: string;
+        occurrenceCount: number;
+        cweId?: string;
+    }[];
+}>;
+export type TMidServersHealth = TSectionTemplate<{
+    issueType: EIssueType.MID_SERVERS_HEALTH;
+    sectionConfig: {};
+    scanDetails: {
+        sys_id: string;
+        name: string;
+        status: string;
+        version: string;
+        validated: string;
+        host_name: string;
+        last_refreshed: string;
+        mean_cpu: number;
+        max_memory: number;
+        cpu_trend: {
+            first_entry_date: string | null;
+            last_entry_date: string | null;
+            average_interval_ms: number;
+            mean_values: number[];
+            url: string;
+        };
+        issues: {
+            list: {
+                message: string;
+                state: string;
+            }[];
+            url: string;
+        };
+        queue_backlog_count: number;
+        ragStatus: "Green" | "Amber" | "Red";
+        url: string;
     }[];
 }>;
 export type TApiIntegrationSection = TSectionTemplate<{

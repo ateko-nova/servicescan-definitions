@@ -56,7 +56,11 @@ export enum EIssueType {
   DATABASE_PERFORMANCE_ANALYSIS = 32,
   DATA_ARCHIVING_RETENTION = 33,
   ACCESS_CONTROL_MODEL = 34,
-  API_INTEGRATION = 35,
+  UNUSED_LICENSES = 35,
+  PORTAL_WORKSPACE_CUSTOMIZATION_REVIEW = 36,
+  CODE_SECURITY_ANALYSIS = 37,
+  MID_SERVERS_HEALTH = 38,
+    API_INTEGRATION = 39,
 }
 
 //export type EIssueTypeExcludeMonthly = Exclude<EIssueType, EIssueType.MONTHLY_REPORT>;
@@ -96,6 +100,11 @@ export const IssueTypeTitleMap: Record<EIssueType, string> = {
   [EIssueType.DATABASE_PERFORMANCE_ANALYSIS]: "Database Performance Analysis",
   [EIssueType.DATA_ARCHIVING_RETENTION]: "Data Archiving & Retention",
   [EIssueType.ACCESS_CONTROL_MODEL]: "Access Control Model",
+  [EIssueType.UNUSED_LICENSES]: "Unused Licenses Identification",
+  [EIssueType.PORTAL_WORKSPACE_CUSTOMIZATION_REVIEW]:
+    "Portal & Workspace Customization Review",
+  [EIssueType.CODE_SECURITY_ANALYSIS]: "Code Security Analysis",
+  [EIssueType.MID_SERVERS_HEALTH]: "Mid Servers Health",
   [EIssueType.API_INTEGRATION]: "API and Integration Performance",
 };
 
@@ -105,6 +114,7 @@ export const CategoryToIssueTypesMap: Record<ECategory, EIssueType[]> = {
     EIssueType.GLOBAL_UI_SCRIPTS,
     EIssueType.BUSY_FORMS,
     EIssueType.TOO_MANY_CHOICES,
+    EIssueType.PORTAL_WORKSPACE_CUSTOMIZATION_REVIEW,
   ],
 
   [ECategory.MANAGEABILITY]: [
@@ -123,6 +133,7 @@ export const CategoryToIssueTypesMap: Record<ECategory, EIssueType[]> = {
     EIssueType.UNDERUSED_LICENSES,
     EIssueType.SOFTWARE_ENTITLEMENTS,
     EIssueType.DEPRECATED_APIS,
+    EIssueType.UNUSED_LICENSES,
   ],
 
   [ECategory.SECURITY]: [
@@ -134,6 +145,7 @@ export const CategoryToIssueTypesMap: Record<ECategory, EIssueType[]> = {
     EIssueType.SCRIPT_INCLUDE_NO_ACL,
     EIssueType.ADMIN_ROLE_REPORT,
     EIssueType.ACCESS_CONTROL_MODEL,
+    EIssueType.CODE_SECURITY_ANALYSIS,
   ],
 
   [ECategory.PERFORMANCE]: [
@@ -145,6 +157,7 @@ export const CategoryToIssueTypesMap: Record<ECategory, EIssueType[]> = {
     EIssueType.ATTACHMENT_STATS,
     EIssueType.DATABASE_PERFORMANCE_ANALYSIS,
     EIssueType.DATA_ARCHIVING_RETENTION,
+    EIssueType.MID_SERVERS_HEALTH,
     EIssueType.API_INTEGRATION
   ],
 };

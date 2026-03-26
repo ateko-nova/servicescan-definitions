@@ -59,7 +59,11 @@ var EIssueType;
     EIssueType[EIssueType["DATABASE_PERFORMANCE_ANALYSIS"] = 32] = "DATABASE_PERFORMANCE_ANALYSIS";
     EIssueType[EIssueType["DATA_ARCHIVING_RETENTION"] = 33] = "DATA_ARCHIVING_RETENTION";
     EIssueType[EIssueType["ACCESS_CONTROL_MODEL"] = 34] = "ACCESS_CONTROL_MODEL";
-    EIssueType[EIssueType["API_INTEGRATION"] = 35] = "API_INTEGRATION";
+    EIssueType[EIssueType["UNUSED_LICENSES"] = 35] = "UNUSED_LICENSES";
+    EIssueType[EIssueType["PORTAL_WORKSPACE_CUSTOMIZATION_REVIEW"] = 36] = "PORTAL_WORKSPACE_CUSTOMIZATION_REVIEW";
+    EIssueType[EIssueType["CODE_SECURITY_ANALYSIS"] = 37] = "CODE_SECURITY_ANALYSIS";
+    EIssueType[EIssueType["MID_SERVERS_HEALTH"] = 38] = "MID_SERVERS_HEALTH";
+    EIssueType[EIssueType["API_INTEGRATION"] = 39] = "API_INTEGRATION";
 })(EIssueType || (exports.EIssueType = EIssueType = {}));
 //export type EIssueTypeExcludeMonthly = Exclude<EIssueType, EIssueType.MONTHLY_REPORT>;
 exports.IssueTypeTitleMap = {
@@ -95,6 +99,10 @@ exports.IssueTypeTitleMap = {
     [EIssueType.DATABASE_PERFORMANCE_ANALYSIS]: "Database Performance Analysis",
     [EIssueType.DATA_ARCHIVING_RETENTION]: "Data Archiving & Retention",
     [EIssueType.ACCESS_CONTROL_MODEL]: "Access Control Model",
+    [EIssueType.UNUSED_LICENSES]: "Unused Licenses Identification",
+    [EIssueType.PORTAL_WORKSPACE_CUSTOMIZATION_REVIEW]: "Portal & Workspace Customization Review",
+    [EIssueType.CODE_SECURITY_ANALYSIS]: "Code Security Analysis",
+    [EIssueType.MID_SERVERS_HEALTH]: "Mid Servers Health",
     [EIssueType.API_INTEGRATION]: "API and Integration Performance",
 };
 exports.CategoryToIssueTypesMap = {
@@ -103,6 +111,7 @@ exports.CategoryToIssueTypesMap = {
         EIssueType.GLOBAL_UI_SCRIPTS,
         EIssueType.BUSY_FORMS,
         EIssueType.TOO_MANY_CHOICES,
+        EIssueType.PORTAL_WORKSPACE_CUSTOMIZATION_REVIEW,
     ],
     [ECategory.MANAGEABILITY]: [
         EIssueType.INSTANCE_ERROR_LOGS,
@@ -119,6 +128,7 @@ exports.CategoryToIssueTypesMap = {
         EIssueType.UNDERUSED_LICENSES,
         EIssueType.SOFTWARE_ENTITLEMENTS,
         EIssueType.DEPRECATED_APIS,
+        EIssueType.UNUSED_LICENSES,
     ],
     [ECategory.SECURITY]: [
         EIssueType.ACL,
@@ -129,6 +139,7 @@ exports.CategoryToIssueTypesMap = {
         EIssueType.SCRIPT_INCLUDE_NO_ACL,
         EIssueType.ADMIN_ROLE_REPORT,
         EIssueType.ACCESS_CONTROL_MODEL,
+        EIssueType.CODE_SECURITY_ANALYSIS,
     ],
     [ECategory.PERFORMANCE]: [
         EIssueType.SLOW_QUERIES,
@@ -139,6 +150,7 @@ exports.CategoryToIssueTypesMap = {
         EIssueType.ATTACHMENT_STATS,
         EIssueType.DATABASE_PERFORMANCE_ANALYSIS,
         EIssueType.DATA_ARCHIVING_RETENTION,
+        EIssueType.MID_SERVERS_HEALTH,
         EIssueType.API_INTEGRATION
     ],
 };
