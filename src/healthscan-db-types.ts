@@ -60,6 +60,7 @@ export enum EIssueType {
   PORTAL_WORKSPACE_CUSTOMIZATION_REVIEW = 36,
   CODE_SECURITY_ANALYSIS = 37,
   MID_SERVERS_HEALTH = 38,
+  API_INTEGRATION = 39,
 }
 
 //export type EIssueTypeExcludeMonthly = Exclude<EIssueType, EIssueType.MONTHLY_REPORT>;
@@ -104,6 +105,7 @@ export const IssueTypeTitleMap: Record<EIssueType, string> = {
     "Portal & Workspace Customization Review",
   [EIssueType.CODE_SECURITY_ANALYSIS]: "Code Security Analysis",
   [EIssueType.MID_SERVERS_HEALTH]: "Mid Servers Health",
+  [EIssueType.API_INTEGRATION]: "API and Integration Performance",
 };
 
 export const CategoryToIssueTypesMap: Record<ECategory, EIssueType[]> = {
@@ -156,5 +158,6 @@ export const CategoryToIssueTypesMap: Record<ECategory, EIssueType[]> = {
     EIssueType.DATABASE_PERFORMANCE_ANALYSIS,
     EIssueType.DATA_ARCHIVING_RETENTION,
     EIssueType.MID_SERVERS_HEALTH,
+    EIssueType.API_INTEGRATION,
   ],
 };
