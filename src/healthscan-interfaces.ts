@@ -607,3 +607,19 @@ export type TApiIntegrationSection = TSectionTemplate<{
     ipAddress?: string;
   }[];
 }>;
+export type TScheduledJobsHealthSection = TSectionTemplate<{
+  issueType: EIssueType.SCHEDULED_JOBS_HEALTH;
+  sectionConfig: {};
+  scanDetails: {
+    id: string;
+    name: string;
+    url: string;
+    status: "running" | "error" | "success" | "stuck";
+    lastRunTime?: string;
+    lastRunDuration?: string;
+    nextRunTime?: string;
+    avgDuration?: number;
+    runCount?: number;
+    errorCount?: number;
+  }[];
+}>;
