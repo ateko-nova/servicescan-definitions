@@ -615,6 +615,7 @@ export type TScheduledJobsHealthSection = TSectionTemplate<{
     name: string;
     url: string;
     status: string;
+    triggerType: string;
     nextRunTime?: string;
     lastRunTime?: string;
     lastRunDuration?: string;

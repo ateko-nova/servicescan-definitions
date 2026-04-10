@@ -568,12 +568,15 @@ export type TScheduledJobsHealthSection = TSectionTemplate<{
         id: string;
         name: string;
         url: string;
-        status: "running" | "error" | "success" | "stuck";
+        status: string;
+        triggerType: string;
+        nextRunTime?: string;
         lastRunTime?: string;
         lastRunDuration?: string;
-        nextRunTime?: string;
+        logCount?: number;
         avgDuration?: number;
-        runCount?: number;
+        executionCount?: number;
+        avgProcessingTime?: number;
         errorCount?: number;
     }[];
 }>;
