@@ -50,7 +50,8 @@ export declare enum EIssueType {
     PORTAL_WORKSPACE_CUSTOMIZATION_REVIEW = 36,
     CODE_SECURITY_ANALYSIS = 37,
     MID_SERVERS_HEALTH = 38,
-    API_INTEGRATION = 39
+    API_INTEGRATION = 39,
+    SCHEDULED_JOBS_HEALTH = 40
 }
 export declare const IssueTypeTitleMap: Record<EIssueType, string>;
 export declare const CategoryToIssueTypesMap: Record<ECategory, EIssueType[]>;

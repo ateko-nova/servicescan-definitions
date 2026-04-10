@@ -64,6 +64,7 @@ var EIssueType;
     EIssueType[EIssueType["CODE_SECURITY_ANALYSIS"] = 37] = "CODE_SECURITY_ANALYSIS";
     EIssueType[EIssueType["MID_SERVERS_HEALTH"] = 38] = "MID_SERVERS_HEALTH";
     EIssueType[EIssueType["API_INTEGRATION"] = 39] = "API_INTEGRATION";
+    EIssueType[EIssueType["SCHEDULED_JOBS_HEALTH"] = 40] = "SCHEDULED_JOBS_HEALTH";
 })(EIssueType || (exports.EIssueType = EIssueType = {}));
 //export type EIssueTypeExcludeMonthly = Exclude<EIssueType, EIssueType.MONTHLY_REPORT>;
 exports.IssueTypeTitleMap = {
@@ -104,6 +105,7 @@ exports.IssueTypeTitleMap = {
     [EIssueType.CODE_SECURITY_ANALYSIS]: "Code Security Analysis",
     [EIssueType.MID_SERVERS_HEALTH]: "Mid Servers Health",
     [EIssueType.API_INTEGRATION]: "API and Integration Performance",
+    [EIssueType.SCHEDULED_JOBS_HEALTH]: "Scheduled Jobs Health",
 };
 exports.CategoryToIssueTypesMap = {
     [ECategory.UX_UI]: [
@@ -152,5 +154,6 @@ exports.CategoryToIssueTypesMap = {
         EIssueType.DATA_ARCHIVING_RETENTION,
         EIssueType.MID_SERVERS_HEALTH,
         EIssueType.API_INTEGRATION,
+        EIssueType.SCHEDULED_JOBS_HEALTH,
     ],
 };
